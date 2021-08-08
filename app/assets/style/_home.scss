@@ -1,0 +1,611 @@
+// ---首頁Banner---
+.home-banner{
+  width: 100%;
+  height: 840px;
+  background: url(../images/banner.png) no-repeat center center;
+
+  // 消除 Collapsing margins
+  padding-top: 1px;
+
+  // Slogan
+  &__slogan{
+    max-width: 1110px;
+    margin: 0 auto;
+    text-align: right;
+    margin-top: 348px;
+
+    color: $secondary-color;
+
+    h3{
+      margin-bottom: 8px;
+    }
+  }
+
+
+  // RWD - pad
+  @include RWD-pad{
+    &__slogan{
+      margin-right: 70px;
+    }
+
+    h3{
+      font-size: 20px;
+    }
+
+    h2{
+      font-size: 48px;
+    }
+  }
+
+  // RWD - mobile
+  @include RWD-mobile{
+    height: 394px;
+    background-size: cover;
+
+    &__slogan{
+      margin-right: 45px;
+      margin-top: 164px;
+    }
+
+    h3{
+      font-size: 16px;
+    }
+
+    h2{
+      font-size: 32px;
+    }
+  }
+}
+
+// 服務說明
+.service{
+  background: $background-color;
+
+  h3{
+    color: $secondary-color;
+    margin-bottom: 48px;
+    
+  }
+
+  .service__items{
+    display: flex;
+    justify-content: center;
+    @include horizontal-nav(1110px);
+
+    li{
+        width: 255px;
+    }
+
+    img{
+      width: 84px;
+      height: 84px;
+      margin-bottom: 24px;
+    }
+
+    h5{
+        color: $secondary-color;
+        margin-bottom: 8px;
+    }
+
+    p{
+      text-align-last: left;
+    }
+  }
+
+  @include RWD-pad{
+    .container{
+      padding: 40px 0 11px 0;
+    }
+
+    h3{
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    .service__items{
+      max-width: 585px;
+      flex-wrap: wrap;
+      margin: 0 auto;
+
+      li{
+        margin-bottom: 45px;
+      }
+
+      h5{
+        font-size: 24px;
+      }
+
+      p{
+        font-size: 16px;
+      }
+    }
+  }
+
+  @include RWD-mobile{
+    .container{
+      padding: 32px 0 40px 0;
+    }
+
+    h3{
+      font-size: 24px;
+      margin-bottom: 28px;
+    }
+
+    .service__items{
+      width: 255px;
+      flex-wrap: wrap;
+      margin: 0 auto;
+    }
+  }
+}
+
+
+// 經典系列鏡框
+.classic-series{
+
+  h3{
+    color: $secondary-color;
+    margin-bottom: 40px;  
+  }
+
+  .type{
+    display: flex;
+    flex-wrap: wrap;
+
+    li{
+      display: flex;
+      max-width: 100%;
+      margin-bottom: 32px;
+
+      .picture-op{
+        width: 635px;
+        height: 320px;
+      }
+    }
+
+    // 偶數相反排序  
+    .reverse{
+      flex-direction: row-reverse;
+
+      h3{
+        margin-right: 32px;
+      }
+    }
+    // 偶數相反排序
+
+    h3{
+      display: flex;
+      align-items: center;
+      margin-left: 32px;
+
+      a{
+        color: $primary-color;
+      }
+    }
+  }
+
+  @include RWD-pad{
+    .container{
+      padding: 40px 0 56px 0;
+      width: 690px;
+    }
+
+    h3{
+      font-size: 32px;
+    }
+
+    .type{
+
+      li{
+        .picture-op{
+          width: 390px;
+          height: 168px;
+        }
+      }
+
+      h3{
+
+        a{
+          font-size: 28px;
+        }
+
+        img{
+          width: 26px;
+          height: 26px;
+        }
+      }
+
+      .reverse{
+        flex-direction: row;
+
+        h3{
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  @include RWD-mobile{
+    .container{
+      padding: 32px 0 40px 0;
+      width: 345px;
+    }
+
+    h3{
+      font-size: 20px;
+    }
+
+    .type{
+
+      li{
+        position: relative;
+        margin-bottom: 8px;
+
+        .picture-op{
+          width: 345px;
+          height: 134px;
+        }
+      }
+
+      h3{
+        position: absolute;
+        top: 54px;
+        left: 70px;
+
+        a{
+          font-size: 28px;
+        }
+
+        img{
+          width: 26px;
+          height: 26px;
+        }
+      }
+
+      .reverse{
+        flex-direction: row;
+
+        h3{
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+
+// 聯名設計鏡框
+.design-series{
+  background: url(../images/bg.png)no-repeat center center;
+
+  h3{
+    color: #fff;
+    margin-bottom: 40px;
+  }
+
+  .type{
+    display: flex;
+    justify-content: space-between;
+
+    li{
+      position: relative;
+      background: #fff;
+
+      img{
+        max-width: 540px;
+        max-height: 455px;
+        opacity: 0.5;
+        transition: all 0.3s;
+      }
+      
+      img:hover{
+        opacity: 0.8;
+      }
+
+      h2{
+        position: absolute;
+        color: $primary-color;
+        top: 181px;
+      }
+    }
+
+    &__doubleA__tittle{
+      left: 104px;
+    }
+
+    &__youth__tittle{
+      left: 152px;
+    }
+  }
+
+  @include RWD-pad{
+    .container{
+      width: 690px;
+      padding: 40px 0 40px 0;
+    }
+
+    h3{
+      font-size: 32px;
+      margin-bottom: 32px;
+    }
+
+    .type{
+      
+      li{
+        width: 330px;
+        margin-bottom: 16px;
+
+        img{
+          width: 330px;
+          height: 278px;
+        }
+
+        h2{
+          font-size: 32px;
+          top: 118px;
+        }
+      }
+
+      &__doubleA__tittle{
+        left: 91px;
+      }
+  
+      &__youth__tittle{
+        left: 113px;
+      }
+    }
+  }
+
+  @include RWD-mobile{
+    .container{
+      width: 345px;
+      padding: 32px 0 40px 0;
+    }
+
+    h3{
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .type{
+      flex-direction: column;
+      align-items: center;
+
+      li{
+        width: 345px;
+
+        img{
+          width: 345px;
+          height: 291px;
+        }
+
+        h2{
+          font-size: 32px;
+          top: 124px;
+        }
+      }
+
+      &__doubleA__tittle{
+        left: 95px;
+      }
+  
+      &__youth__tittle{
+        left: 120px;
+      }
+    }
+  }
+}
+
+
+// 顧客推薦
+.recommend{
+
+  h3{
+    color: $secondary-color;
+    margin-bottom: 40px;
+  }
+
+  &__list{
+    @include horizontal-nav;
+
+    .card{
+      box-shadow: 1px 1px 6px #999;
+      margin-left: 30px;
+      text-align-last: left;
+
+      &:first-child{
+        margin-left: 0;
+      }
+
+      img{
+        width: 255px;
+        height: 256px;
+      }
+
+      .text{
+        padding: 16px;
+        height: 204px;
+        position: relative;
+      }
+
+      h6{
+        margin-bottom: 8px;
+      }
+
+      .date{
+        color: #707070;
+        position: absolute;
+        left: 16px;
+        bottom: 16px;
+      }
+    }
+  }
+
+  @include RWD-pad{
+    .container{
+      width: 690px;
+      padding: 40px 0 24px 0;
+    }
+
+    h3{
+      font-size: 32px;
+      margin-bottom: 32px;
+    }
+
+    &__list{
+      flex-wrap: wrap;
+
+      .card{
+        width: 330px;
+        margin-bottom: 32px;
+
+        &-3{
+          margin-left: 0;
+        }
+
+        img{
+          width: 330px;
+          height: 256px;
+        }
+      }
+    }
+  }
+
+  @include RWD-mobile{
+    .container{
+      width: 345px;
+      padding: 32px 0 24px 0;
+    }
+
+    h3{
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    &__list{
+      flex-wrap: wrap;
+
+      .card{
+        width: 345px;
+        margin-left: 0;
+        margin-bottom: 16px;
+
+        img{
+          width: 345px;
+          height: 256px;
+        }
+      }
+    }
+  }
+}
+
+
+// 聯絡我們
+.contact{
+  background: $background-color;
+
+  .container{
+    max-width: 730px;
+  }
+
+  h3{
+    margin-bottom: 24px;
+  }
+
+  p{
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  &__form{
+    text-align: left;  
+
+    input{
+      width: 100%;
+      line-height: 36px;
+      margin-top: 4px;
+      margin-bottom: 16px;
+      background: $background-color;
+      border: 1px solid #999;
+
+      &::placeholder{
+        color: #999;
+        margin-left: 16px;
+      }
+    }
+
+    .feedback{
+      height: 136px;
+    }
+
+    .policy-check{
+      display: flex;
+      margin-top: 24px;
+      margin-bottom: 40px;
+
+      input{
+        width: 30px;
+        margin: 0;
+      }
+    }
+
+    .submit{
+      background: $primary-color;
+      color: #fff;
+      max-width: 350px;
+      display: block;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+
+    .submit:active{
+      background: $secondary-color;
+    }
+  }
+
+  @include RWD-pad{
+    .container{
+      width: 450px;
+      padding: 40px 0 56px 0;
+    }
+
+    h3{
+      font-size: 32px;
+    }
+
+    p{
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+
+    &__form{
+      font-size: 14px;
+
+      .policy-check{
+        margin-top: 8px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  @include RWD-pad{
+    .container{
+      width: 345px;
+      padding: 30px 0 40px 0;
+    }
+
+    h3{
+      font-size: 20px;
+    }
+
+    p{
+      margin-bottom: 8px;
+    }
+
+    &__form{
+      .policy-check{
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

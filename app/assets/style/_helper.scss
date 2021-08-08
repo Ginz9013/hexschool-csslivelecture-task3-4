@@ -1,0 +1,101 @@
+// 購物車區域
+.shopping-area{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .card-shopping{
+    margin-bottom: 104px;
+  
+    img{
+      width: 255px;
+      height: 164px;
+    }
+
+    a{
+      display: block;
+      position: relative;
+      margin-bottom: 8px;
+    }
+
+    a:hover::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $primary-color;
+      opacity: 0.1;
+    }
+  
+    .product-info{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+  
+    p{
+      color: $primary-color;
+    }
+  
+    .color{
+      display: flex;
+  
+      &__darkBrown{
+        width: 24px;
+        height: 24px;
+        border-radius: 6px;
+        background: #5F3E2D;
+        margin-right: 8px;
+        
+      }
+  
+      &__brown{
+        width: 24px;
+        height: 24px;
+        border-radius: 6px;
+        background: #B75929;
+      }
+    }
+  }
+}
+
+
+// Pagination
+.pagination{
+  display: flex;
+  justify-content: center;
+
+  .pages{
+    display: flex;
+    align-items: center;
+
+    &__numbers{
+      display: block;
+      width: 42px;
+      height: 48px;
+      border: 1px solid #000;
+      line-height: 48px;
+    }
+  }
+
+  .page-up, .page-down{
+    display: block;
+    width: 81px;
+    height: 48px;
+    border: 1px solid #000;
+    line-height: 48px;
+  }
+
+  .current{
+    background: #000;
+    color: #fff;
+  }
+
+  .pages__numbers:hover:not(.current), 
+  .page-up:hover, 
+  .page-down:hover{
+    background: #F2F2F2;
+  }
+}

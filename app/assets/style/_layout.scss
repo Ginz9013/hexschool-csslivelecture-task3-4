@@ -1,0 +1,201 @@
+// ---Header---
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 88px;
+  background: $primary-color;
+
+  h1{
+    @include h1-logo("../images/logo.png", 80px, 48.57px);
+  }
+
+  &__menu{
+    @include horizontal-nav(492px);
+  }
+
+  // RWD-Pad
+  @include RWD-pad{
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  // RWD-mobile
+  @include RWD-mobile{
+    display: block;
+    padding: 0;
+    padding-top: 16px;
+
+    h1{
+      width: 100%;
+      margin-bottom: 16px;
+    }
+
+    &__menu{
+      flex-wrap: wrap;
+      width: 100%;
+
+      li{
+        width: 50%;
+        border: 1px solid #fff;
+        text-align: center;
+        padding: 8px 0;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+// ---Footer---
+
+.footer{
+  background: $primary-color;
+
+  .container{
+    padding: 40px 0;
+    text-align: left;
+  }
+
+  &__bar{
+    display: flex;
+    justify-content: space-between;
+
+    &__nav{
+      @include horizontal-nav(464px);
+    }
+
+    &__sns{
+      @include horizontal-nav(208px);
+    }
+  }
+
+  &__contact{
+    border-bottom: 1px solid #fff;
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+
+    li:first-child{
+      margin-bottom: 16px;
+    }
+    
+    img{
+      width: 36px;
+      height: 36px;
+      margin-right: 16px;
+    }
+  }
+
+  &__policy{
+    @include horizontal-nav;
+
+    &__terms{
+      @include horizontal-nav(174px);
+    }
+  }
+
+
+  // RWD-Pad
+  @include RWD-pad{
+    .container{
+      width: 690px;
+    }
+
+    &__bar{
+      margin-bottom: 20px;
+    }
+
+    &__bar__nav{
+      width: 432px;
+      margin-left: 9px;
+    }
+
+    &__bar__sns{
+      width: 120px;
+      
+      img{
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &__contact{
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+
+      .font-36{
+        font-size: 20px;
+      }
+
+      img{
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    &__terms{
+      width: 150px;
+    }
+
+  }
+
+
+  // RWD-mobile
+  @include RWD-mobile{
+    .container{
+      width: 100%;
+      padding: 24px 16px;
+      position: relative;
+      
+    }
+
+    &__bar{
+      position: absolute;
+      right: 16px;
+    }
+
+    &__bar__nav{
+      display: none;
+    }
+
+    &__contact{
+      padding-bottom: 24px;
+      margin-bottom: 16px;
+
+      img{
+        width: 16px;
+        height: 16px;
+        margin-right: 6px;
+      }
+
+      .font-36{
+        font-size: 16;
+      }
+    }
+
+    &__policy{
+      display: block;
+
+      p{
+        margin-bottom: 8px;
+      }
+
+      .font16{
+        font-size: 14px;
+      }
+
+      &__terms{
+        display: block;
+      }
+
+      li:first-child{
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
